@@ -1,0 +1,72 @@
+{
+  "name": "close-random-tab",
+  "version": "1.0.0",
+  "description": "A Chrome extension that randomly closes one of your open tabs to help manage tab overload",
+  "keywords": [
+    "chrome-extension",
+    "browser-extension",
+    "tab-management",
+    "productivity"
+  ],
+  "homepage": "https://github.com/syoummer/close-tab",
+  "bugs": {
+    "url": "https://github.com/syoummer/close-tab/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/syoummer/close-tab.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Your Name",
+    "email": "your.email@example.com"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "build": "npm run build:dev",
+    "build:dev": "cp -r src/* dist/",
+    "build:prod": "npm run build:dev && cd dist && zip -r ../close-random-tab.zip .",
+    "lint": "eslint src/**/*.js",
+    "lint:fix": "eslint src/**/*.js --fix"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "jest": "^29.7.0",
+    "jest-puppeteer": "^9.0.2",
+    "puppeteer": "^21.11.0"
+  },
+  "jest": {
+    "preset": "jest-puppeteer",
+    "testEnvironment": "node",
+    "setupFilesAfterEnv": ["<rootDir>/test/setup.js"],
+    "testMatch": ["<rootDir>/test/**/*.test.js"],
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/icons/**"
+    ]
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es2021": true,
+      "webextensions": true
+    },
+    "extends": ["eslint:recommended"],
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+    },
+    "rules": {
+      "no-unused-vars": "warn",
+      "no-console": "off"
+    },
+    "globals": {
+      "chrome": "readonly"
+    }
+  }
+}
