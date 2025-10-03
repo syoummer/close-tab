@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Close Random Tab</title>
+  <style>
+    body {
+      width: 280px;
+      padding: 20px;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 0 10px 0;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .subtitle {
+      margin: 0 0 20px 0;
+      font-size: 12px;
+      opacity: 0.8;
+    }
+
+    .main-button {
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 8px;
+      color: white;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 12px 20px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      width: 100%;
+      backdrop-filter: blur(10px);
+    }
+
+    .main-button:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateY(-1px);
+    }
+
+    .main-button:active {
+      transform: translateY(0);
+    }
+
+    .main-button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .status {
+      margin-top: 15px;
+      font-size: 12px;
+      min-height: 16px;
+      opacity: 0.9;
+    }
+
+    .status.success {
+      color: #90EE90;
+    }
+
+    .status.error {
+      color: #FFB6C1;
+    }
+
+    .dice-icon {
+      font-size: 20px;
+      margin-right: 8px;
+    }
+
+    .tab-info {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 11px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .tab-title {
+      font-weight: 500;
+      margin-bottom: 4px;
+      word-break: break-word;
+    }
+
+    .tab-count {
+      opacity: 0.7;
+    }
+
+    .undo-section {
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .undo-button {
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 6px;
+      color: white;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 8px 16px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      width: 100%;
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .undo-button:hover {
+      background: rgba(255, 255, 255, 0.25);
+      transform: translateY(-1px);
+    }
+
+    .undo-button:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .undo-info {
+      font-size: 10px;
+      opacity: 0.7;
+      margin-top: 8px;
+      line-height: 1.3;
+    }
+
+    .undo-icon {
+      font-size: 14px;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎲 Close Random Tab</h1>
+    <p class="subtitle">Randomly close one of your open tabs</p>
+    
+    <button id="closeButton" class="main-button">
+      <span class="dice-icon">🎯</span>
+      Close Random Tab
+    </button>
+    
+    <div id="status" class="status"></div>
+    <div id="tabInfo" class="tab-info" style="display: none;"></div>
+    
+    <div id="undoSection" class="undo-section hidden">
+      <button id="undoButton" class="undo-button">
+        <span class="undo-icon">↶</span>
+        Reopen Last Closed Tab
+      </button>
+      <div id="undoInfo" class="undo-info"></div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

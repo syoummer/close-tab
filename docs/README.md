@@ -21,6 +21,7 @@ close-tab/
 │   ├── README.md           # Project overview (this file)
 │   ├── api.md             # Extension API documentation
 │   ├── development.md     # Development setup and guidelines
+│   ├── testing.md         # Manual testing instructions
 │   └── user-guide.md      # User installation and usage guide
 ├── src/
 │   ├── manifest.json      # Extension manifest
@@ -35,7 +36,8 @@ close-tab/
 
 1. See [Development Guide](development.md) for setup instructions
 2. See [User Guide](user-guide.md) for installation and usage
-3. See [API Documentation](api.md) for technical details
+3. See [Testing Guide](testing.md) for manual testing instructions
+4. See [API Documentation](api.md) for technical details
 
 ## Contributing
 
