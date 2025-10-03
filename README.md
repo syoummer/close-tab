@@ -159,6 +159,11 @@ The extension doesn't distinguish between tabs - it's completely random. Be caut
 
 - Thanks to all contributors who help improve this extension
 - Inspired by the need to manage tab overload in modern web browsing
+- Dice emoji icons by [Twemoji](https://github.com/twitter/twemoji) (CC-BY 4.0)
+
+## 📄 Attribution
+
+This project uses the dice emoji from Twemoji, licensed under CC-BY 4.0. See [ATTRIBUTION.md](ATTRIBUTION.md) for full details.
 
 ---
 

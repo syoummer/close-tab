@@ -29,8 +29,11 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "build": "npm run build:dev",
-    "build:dev": "cp -r src/* dist/",
-    "build:prod": "npm run build:dev && cd dist && zip -r ../close-random-tab.zip .",
+    "build:dev": "mkdir -p dist && cp -r src/* dist/",
+    "build:prod": "npm run clean && npm run build:dev && npm run package",
+    "clean": "rm -rf dist/ *.zip",
+    "package": "cd dist && zip -r ../close-random-tab-v$(node -p \"require('../package.json').version\").zip . && cd .. && echo 'Package created: close-random-tab-v'$(node -p \"require('./package.json').version\")'.zip'",
+    "validate": "npm run lint && npm test && npm run build:prod",
     "lint": "eslint src/**/*.js",
     "lint:fix": "eslint src/**/*.js --fix"
   },

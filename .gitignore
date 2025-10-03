@@ -58,3 +58,7 @@ key.pem
 # Temporary files
 tmp/
 temp/
+
+# Internal documentation (private)
+docs/internal/
+store-assets/
