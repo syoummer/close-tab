@@ -3,7 +3,7 @@
 A Chrome extension that randomly closes one of your open tabs to help manage tab overload.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Chrome Web Store](https://img.shields.io/badge/Chrome-Web%20Store-blue)](https://chrome.google.com/webstore)
+[![Chrome Web Store](https://img.shields.io/badge/Chrome-Web%20Store-blue)](https://chromewebstore.google.com/detail/close-random-tab/ljnahamcajanhfikhngchoehgedlmnci)
 
 ## 🚀 Features
 
@@ -17,10 +17,9 @@ A Chrome extension that randomly closes one of your open tabs to help manage tab
 
 ### From Chrome Web Store (Recommended)
 
-1. Visit the [Chrome Web Store](https://chrome.google.com/webstore) (link coming soon)
-2. Search for "Close Random Tab"
-3. Click "Add to Chrome"
-4. Confirm installation when prompted
+1. Visit the [Close Random Tab extension page](https://chromewebstore.google.com/detail/close-random-tab/ljnahamcajanhfikhngchoehgedlmnci)
+2. Click "Add to Chrome"
+3. Confirm installation when prompted
 
 ### Manual Installation (Development)
 
